@@ -16,18 +16,22 @@ namespace CalibreBrowser
         {
             var c = new SQLiteAsyncConnection(@"C:\Users\victor\calibre\metadata.db");
 
-            var books = await c.Table<books>().ToListAsync();
+            var books = await c.Table<Book>().ToListAsync();
 
             foreach (var book in books)
             {
-                Console.WriteLine($"{book.id}: {book.title}");
+                Console.WriteLine($"{book.Id}: {book.Title}");
             }
         }
     }
 
-    public class books
+    [Table("books")]
+    public class Book
     {
-        public int id { get; set; }
-        public string title { get; set; }
+        [Column("id")]
+        public int Id { get; set; }
+
+        [Column("title")]
+        public string Title { get; set; }
     }
 }
