@@ -14,9 +14,8 @@ namespace CalibreBrowser
 
         private static async Task Query()
         {
-            var c = new SQLiteAsyncConnection(@"..\..\..\..\data\metadata.db");
-
-            var books = await c.Table<Book>().ToListAsync();
+            var bookRepository = new BookRepository(@"..\..\..\..\data\metadata.db");
+            var books = await bookRepository.GetBooks();
 
             foreach (var book in books)
             {
