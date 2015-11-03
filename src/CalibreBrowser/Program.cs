@@ -1,15 +1,13 @@
-﻿using SQLite;
-using System;
+﻿using System;
 using System.Threading.Tasks;
 
 namespace CalibreBrowser
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             Query().Wait();
-
         }
 
         private static async Task Query()
@@ -22,15 +20,5 @@ namespace CalibreBrowser
                 Console.WriteLine($"{book.Id}: {book.Title}");
             }
         }
-    }
-
-    [Table("books")]
-    public class Book
-    {
-        [Column("id")]
-        public int Id { get; set; }
-
-        [Column("title")]
-        public string Title { get; set; }
     }
 }
