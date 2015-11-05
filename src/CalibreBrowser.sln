@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalibreBrowser", "CalibreBrowser\CalibreBrowser.csproj", "{C8F1E286-A33D-4493-A1E5-2BF8BCCAB368}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalibreBrowser.App", "CalibreBrowser.App\CalibreBrowser.App.csproj", "{C8F1E286-A33D-4493-A1E5-2BF8BCCAB368}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
